@@ -10,10 +10,10 @@ This project implements a text recognition system using the EMNIST dataset and a
 ## Screenshots
 
 ### Main 
-![Main Interface](main.png)
+![Main Interface](screenshots/main.png)
 
 ### Training Process
-![Training Process](train.png)
+![Training Process](screenshots/train.png)
 
 ## Requirements
 - Python 3.13
