@@ -1,8 +1,11 @@
 """Text recognition entrypoint."""
 
 import keras
-from model import get_model, img_to_str, train_model
+from model import get_model
+from predict import recognize_text
+from train import train_model
 from utils import parse_args
+from config import model_save_name
 
 
 def main():
@@ -18,8 +21,8 @@ def main():
         train_model(get_model(), args.train)
 
     if args.predict:
-        model = keras.models.load_model("model.h5")
-        s_out = img_to_str(model, args.predict)
+        model = keras.models.load_model(model_save_name)
+        s_out = recognize_text(model, args.predict)
         print(s_out)
 
 
