@@ -5,7 +5,7 @@ from data_labels import data_labels
 from utils import calculate_spacing, extract_letters
 
 
-def recognize_text(model: Any, image_file: str) -> str:
+def recognize_text(model: Any, image_file: str):
     """Convert an image of letters to a string using the trained model.
 
     Args:

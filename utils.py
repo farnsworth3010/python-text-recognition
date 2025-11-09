@@ -115,10 +115,12 @@ def extract_letters(image_file: str, out_size=28) -> List[Any]:
     letters.sort(key=lambda x: x[0], reverse=False)
 
     # Display the output image with bounding boxes around the letters.
-    cv2.imshow("Text", output)
+    cv2.imshow(
+        "Press any key to close (the result of recognition is in your terminal)", output
+    )
+    cv2.waitKey(0)
 
     if letters:
-        cv2.waitKey(0)
         return letters
     else:
         print("Unable to extract letters.")
